@@ -21,6 +21,7 @@ let botDataStore: {[key: string]: IBotData} = {};
 let history: IActivity[];
 
 export const initializeRoutes = (
+  port: number,
   app: express.Server,
   serviceUrl: string,
   botUrl: string,
@@ -65,7 +66,7 @@ export const initializeRoutes = (
     });
   });
 
-  app.listen(3000, () => {
+  app.listen(port, () => {
     console.log('listening');
   });
 
