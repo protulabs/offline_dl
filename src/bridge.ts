@@ -66,9 +66,7 @@ export const initializeRoutes = (
     });
   });
 
-  app.listen(port, () => {
-    console.log('listening');
-  });
+  app.listen(port, () => {});
 
   //reconnect API
   app.get('/v3/directline/conversations/:conversationId', (req, res) => {

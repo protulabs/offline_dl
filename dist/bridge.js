@@ -39,9 +39,7 @@ exports.initializeRoutes = (port, app, serviceUrl, botUrl) => {
             });
         });
     });
-    app.listen(port, () => {
-        console.log('listening');
-    });
+    app.listen(port, () => { });
     //reconnect API
     app.get('/v3/directline/conversations/:conversationId', (req, res) => {
         console.warn('/v3/directline/conversations/:conversationId not implemented');
